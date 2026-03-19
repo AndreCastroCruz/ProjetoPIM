@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header-interno">
+      <div class="logo-area">
+        <span class="logo-text">⚽ TicketFut</span>
+      </div>
+
+      <nav>
+        <a href="../index.html">Início</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="meus-ingressos.html">Meus Ingressos</a>
+        <a href="#" id="logout">Sair</a>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <img src="../images/estadio.jpg" class="bg" />
+
+      <div class="overlay">
+        <h2>Seu Carrinho</h2>
+
+        <div id="carrinho-container"></div>
+
+        <h3 id="total-geral"></h3>
+
+        <button id="finalizar-compra">Finalizar Compra</button>
+      </div>
+
+      <div id="modal-pagamento" class="modal">
+        <div class="modal-content">
+          <h2 id="titulo-modal">Forma de Pagamento</h2>
+
+          <!-- OPÇÕES -->
+          <div id="tela-opcoes">
+            <button class="opcao-pagamento" data-tipo="pix">📱 Pix</button>
+            <button class="opcao-pagamento" data-tipo="credito">
+              💳 Crédito
+            </button>
+            <button class="opcao-pagamento" data-tipo="debito">
+              💳 Débito
+            </button>
+          </div>
+
+          <!-- PIX (LIMPO) -->
+          <div id="tela-pix" style="display: none">
+            <div class="pix-container">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PagamentoFake"
+              />
+              <p>Escaneie pelo app do seu banco</p>
+              <div class="botoes">
+                <button id="ja-paguei">Já paguei</button>
+                <button id="cancelar-pix">Cancelar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARTÃO (LIMPO) -->
+          <div id="tela-cartao" style="display: none">
+            <div class="cartao-container">
+              <input type="text" placeholder="Número do cartão" />
+              <input type="text" placeholder="Nome no cartão" />
+              <input type="text" placeholder="Validade (MM/AA)" />
+              <input type="text" placeholder="CVV" />
+
+              <div class="botoes">
+                <button id="pagar-cartao">Pagar</button>
+                <button id="cancelar-cartao">Cancelar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- LOADING -->
+          <div id="loading" style="display: none">
+            <p>⏳ Processando pagamento...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
