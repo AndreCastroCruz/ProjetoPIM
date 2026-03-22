@@ -28,8 +28,9 @@
         <div class="jogos-container">
           <div class="jogo">
             <h3>Corinthians x Santos</h3>
-            <p class="data">20/04</p>
-            <p class="hora">16:00</p>
+            <p class="local">Local: Neo Quimica Arena</p>
+            <p class="data">Data: 20/04</p>
+            <p class="hora">Horário: 16:00</p>
             <p class="preco" data-preco="150">Preço: R$ 150</p>
 
             <input type="number" min="1" value="1" class="quantidade" />
@@ -39,8 +40,9 @@
 
           <div class="jogo">
             <h3>São Paulo x Palmeiras</h3>
-            <p class="data">21/04</p>
-            <p class="hora">18:00</p>
+            <p class="local">Local: MorumBIS</p>
+            <p class="data">Data: 21/04</p>
+            <p class="hora">Horário: 18:00</p>
             <p class="preco" data-preco="160">Preço: R$ 160</p>
 
             <input type="number" min="1" value="1" class="quantidade" />
@@ -50,8 +52,9 @@
 
           <div class="jogo">
             <h3>Flamengo x Vasco</h3>
-            <p class="data">22/04</p>
-            <p class="hora">20:00</p>
+            <p class="local">Local: Maracanã</p>
+            <p class="data">Data: 22/04</p>
+            <p class="hora">Horário: 20:00</p>
             <p class="preco" data-preco="130">Preço: R$ 130</p>
 
             <input type="number" min="1" value="1" class="quantidade" />
@@ -63,5 +66,17 @@
     </section>
 
     <script src="../js/script.js"></script>
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
   </body>
 </html>
