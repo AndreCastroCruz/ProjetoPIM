@@ -1,35 +1,38 @@
 // ================= MEUS INGRESSOS =================
-  const containerIngressos = document.querySelector("#ingressos-container");
+const containerIngressos = document.querySelector("#ingressos-container");
 
-  if (containerIngressos) {
+if (containerIngressos) {
 
-    let ingressos = JSON.parse(localStorage.getItem("ingressos")) || [];
+  const usuario = localStorage.getItem("usuarioLogado");
 
-    if (ingressos.length === 0) {
-      containerIngressos.innerHTML = "<p>Você ainda não comprou ingressos.</p>";
-    } else {
+  let ingressos = JSON.parse(localStorage.getItem("ingressos_" + usuario)) || [];
 
-      ingressos.forEach(item => {
+  if (ingressos.length === 0) {
+    containerIngressos.innerHTML = "<p>Você ainda não comprou ingressos.</p>";
+  } else {
 
-        const div = document.createElement("div");
-        div.classList.add("item-carrinho");
+    ingressos.forEach(item => {
 
-        div.innerHTML = `
-          <h3>${item.nome}</h3>
-          <p>📅 ${item.data}</p>
-          <p>⏰ ${item.hora}</p>
-          <p>Quantidade: ${item.quantidade}</p>
+      const div = document.createElement("div");
+      div.classList.add("item-carrinho");
 
-          <button class="ver-ingresso">Ver meu ingresso</button>
-        `;
+      div.innerHTML = `
+        <h3>${item.nome}</h3>
+        <p>📅 ${item.data}</p>
+        <p>⏰ ${item.hora}</p>
+        <p>Quantidade: ${item.quantidade}</p>
 
-        containerIngressos.appendChild(div);
-        div.querySelector(".ver-ingresso").addEventListener("click", () => {
-          abrirTelaIngressos(item);
-        });
+        <button class="ver-ingresso">Ver meu ingresso</button>
+      `;
+
+      containerIngressos.appendChild(div);
+
+      div.querySelector(".ver-ingresso").addEventListener("click", () => {
+        abrirTelaIngressos(item);
       });
-    }
+    });
   }
+}
 
 function abrirPopupIngresso(nomeJogo) {
   const popup = document.getElementById("popup-ingresso");

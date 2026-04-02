@@ -70,6 +70,8 @@ nav a {
   z-index: 2;
   text-align: center;
   color: white;
+  margin-top: 80px;
+  border: 2px solid transparent;
 
   background: rgba(0, 0, 0, 0.55);
   padding: 50px 70px;
@@ -93,13 +95,20 @@ nav a {
 
 button {
   padding: 12px 25px;
-  margin: 10px;
+  margin: 10px 0;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width: 100%;
+  width: auto;
+
+  text-decoration: none;
 
   transition: all 0.3s ease;
+}
+
+#time {
+  display: block;
+  margin: 10px auto;
 }
 
 /* LOGIN */
@@ -147,9 +156,18 @@ input {
   width: 200px;
   color: white;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+
+  align-items: center;
 }
 
 .jogo button {
+  display: block;
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -521,6 +539,42 @@ input {
     width: 100%;
   }
 
+}
+
+.neon-palmeiras {
+  box-shadow: 0 0 15px #00ff88,
+              0 0 30px #00ff88,
+              0 0 60px #00ff88;
+  border-color: #00ff88;
+}
+
+.neon-corinthians {
+  box-shadow: 0 0 15px #222,
+              0 0 30px #222,
+              0 0 60px #222;
+  border-color: #222;
+}
+
+.neon-flamengo,
+.neon-saopaulo {
+  box-shadow: 0 0 15px red,
+              0 0 30px red,
+              0 0 60px red;
+  border-color: red;
+}
+
+.neon-santos {
+  box-shadow: 0 0 15px #fff,
+              0 0 30px #fff,
+              0 0 60px #fff;
+  border-color: #fff;
+}
+
+.neon-vasco {
+  box-shadow: 0 0 15px #000,
+              0 0 30px #000,
+              0 0 60px #000;
+  border-color: #000;
 }
 
 

@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-const botoesComprar = document.querySelectorAll(".comprar");
+  const botoesComprar = document.querySelectorAll(".comprar");
 
   botoesComprar.forEach(botao => {
     botao.addEventListener("click", () => {
 
       const usuario = localStorage.getItem("usuarioLogado");
+      
 
       if (!usuario) {
         alert("Você precisa estar logado!");
@@ -33,31 +34,15 @@ const botoesComprar = document.querySelectorAll(".comprar");
         local
       };
 
-      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      let carrinho = JSON.parse(localStorage.getItem("carrinho_" + usuario)) || [];
 
       carrinho.push(item);
 
-      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+      localStorage.setItem("carrinho_" + usuario, JSON.stringify(carrinho));
 
       alert(`Ingressos adicionados ao carrinho!\nTotal: R$ ${total}`);
     });
   });
 
-  // ================= FILTRAR JOGOS POR TIME =================
-  const jogosContainer = document.querySelector(".jogos-container");
-
-  if (jogosContainer) {
-    const timeUsuario = localStorage.getItem("timeUsuario");
-
-    const jogos = document.querySelectorAll(".jogo");
-
-    jogos.forEach(jogo => {
-      const titulo = jogo.querySelector("h3").innerText.toLowerCase();
-
-      if (!titulo.includes(timeUsuario)) {
-        jogo.style.display = "none";
-      }
-    });
-  }
 
 });
