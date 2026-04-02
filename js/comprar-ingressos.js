@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     botao.addEventListener("click", () => {
 
       const usuario = localStorage.getItem("usuarioLogado");
-      
 
       if (!usuario) {
         alert("Você precisa estar logado!");
@@ -22,6 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const quantidade = Number(jogo.querySelector(".quantidade").value);
       const local = jogo.querySelector(".local").innerText;
 
+      // 🔥 NOVO: PEGAR SETOR
+      const setor = jogo.querySelector(".setor").value;
+
+      if (!setor) {
+        alert("Selecione um setor!");
+        return;
+      }
+
       const total = preco * quantidade;
 
       const item = {
@@ -31,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
         total,
         data,
         hora,
-        local
+        local,
+        setor // 🔥 AGORA SALVA O SETOR
       };
 
       let carrinho = JSON.parse(localStorage.getItem("carrinho_" + usuario)) || [];
@@ -40,9 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       localStorage.setItem("carrinho_" + usuario, JSON.stringify(carrinho));
 
-      alert(`Ingressos adicionados ao carrinho!\nTotal: R$ ${total}`);
+      alert(`Ingressos adicionados ao carrinho!\nSetor: ${setor}\nTotal: R$ ${total}`);
     });
   });
-
-
 });

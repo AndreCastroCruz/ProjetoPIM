@@ -20,6 +20,7 @@ if (containerIngressos) {
         <h3>${item.nome}</h3>
         <p>📅 ${item.data}</p>
         <p>⏰ ${item.hora}</p>
+        <p>🎫 Setor: ${item.setor}</p>
         <p>Quantidade: ${item.quantidade}</p>
 
         <button class="ver-ingresso">Ver meu ingresso</button>
@@ -64,6 +65,7 @@ function abrirTelaIngressos(item) {
   <h3>${item.nome}</h3>
   <p>${item.data}</p>
   <p>${item.local}</p>
+  <p>🎫 Setor: ${item.setor}</p>
 
   <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(item.nome + i)}">
 

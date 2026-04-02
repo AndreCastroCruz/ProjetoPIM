@@ -1,90 +1,110 @@
 <!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jogos</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Jogos</title>
-  <link rel="stylesheet" href="../css/style.css" />
-</head>
+  <body>
+    <header class="header-interno">
+      <div class="logo-area">
+        <span class="logo-text">⚽ TicketFut</span>
+      </div>
 
-<body>
-  <header class="header-interno">
-    <div class="logo-area">
-      <span class="logo-text">⚽ TicketFut</span>
-    </div>
+      <nav>
+        <a href="../index.html">Início</a>
+        <a href="../pages/carrinho.html">Carrinho</a>
+        <a href="meus-ingressos.html">Meus Ingressos</a>
+        <a href="#" id="logout">Sair</a>
+      </nav>
+    </header>
 
-    <nav>
-      <a href="../index.html">Início</a>
-      <a href="../pages/carrinho.html">Carrinho</a>
-      <a href="meus-ingressos.html">Meus Ingressos</a>
-      <a href="#" id="logout">Sair</a>
-    </nav>
-  </header>
+    <section class="banner">
+      <img src="../images/estadio.jpg" class="bg" />
 
-  <section class="banner">
-    <img src="../images/estadio.jpg" class="bg" />
+      <div class="overlay">
+        <h2>Próximos Jogos</h2>
 
-    <div class="overlay">
-      <h2>Próximos Jogos</h2>
+        <div class="jogos-container">
+          <div class="jogo" data-time="corinthians,santos">
+            <h3>Corinthians x Santos</h3>
+            <p class="local">Local: Neo Quimica Arena</p>
+            <p class="data">Data: 20/04</p>
+            <p class="hora">Horário: 16:00</p>
+            <p class="preco" data-preco="150">Preço: R$ 150</p>
 
+            <input type="number" min="1" value="1" class="quantidade" />
 
+            <select class="setor">
+              <option value="">Selecione o setor</option>
+              <option value="Norte">Norte</option>
+              <option value="Sul">Sul</option>
+              <option value="Leste">Leste</option>
+              <option value="Oeste">Oeste</option>
+            </select>
 
-      <div class="jogos-container">
-        <div class="jogo" data-time="corinthians,santos">
-          <h3>Corinthians x Santos</h3>
-          <p class="local">Local: Neo Quimica Arena</p>
-          <p class="data">Data: 20/04</p>
-          <p class="hora">Horário: 16:00</p>
-          <p class="preco" data-preco="150">Preço: R$ 150</p>
+            <button class="comprar">Comprar</button>
+          </div>
 
-          <input type="number" min="1" value="1" class="quantidade" />
+          <div class="jogo" data-time="sao-paulo,palmeiras">
+            <h3>São Paulo x Palmeiras</h3>
+            <p class="local">Local: MorumBIS</p>
+            <p class="data">Data: 21/04</p>
+            <p class="hora">Horário: 18:00</p>
+            <p class="preco" data-preco="160">Preço: R$ 160</p>
 
-          <button class="comprar">Comprar</button>
-        </div>
+            <input type="number" min="1" value="1" class="quantidade" />
 
-        <div class="jogo" data-time="sao-paulo,palmeiras">
-          <h3>São Paulo x Palmeiras</h3>
-          <p class="local">Local: MorumBIS</p>
-          <p class="data">Data: 21/04</p>
-          <p class="hora">Horário: 18:00</p>
-          <p class="preco" data-preco="160">Preço: R$ 160</p>
+            <select class="setor">
+              <option value="">Selecione o setor</option>
+              <option value="Norte">Norte</option>
+              <option value="Sul">Sul</option>
+              <option value="Leste">Leste</option>
+              <option value="Oeste">Oeste</option>
+            </select>
 
-          <input type="number" min="1" value="1" class="quantidade" />
+            <button class="comprar">Comprar</button>
+          </div>
 
-          <button class="comprar">Comprar</button>
-        </div>
+          <div class="jogo" data-time="flamengo,vasco">
+            <h3>Flamengo x Vasco</h3>
+            <p class="local">Local: Maracanã</p>
+            <p class="data">Data: 22/04</p>
+            <p class="hora">Horário: 20:00</p>
+            <p class="preco" data-preco="130">Preço: R$ 130</p>
 
-        <div class="jogo" data-time="flamengo,vasco">
-          <h3>Flamengo x Vasco</h3>
-          <p class="local">Local: Maracanã</p>
-          <p class="data">Data: 22/04</p>
-          <p class="hora">Horário: 20:00</p>
-          <p class="preco" data-preco="130">Preço: R$ 130</p>
+            <input type="number" min="1" value="1" class="quantidade" />
 
-          <input type="number" min="1" value="1" class="quantidade" />
+            <select class="setor">
+              <option value="">Selecione o setor</option>
+              <option value="Norte">Norte</option>
+              <option value="Sul">Sul</option>
+              <option value="Leste">Leste</option>
+              <option value="Oeste">Oeste</option>
+            </select>
 
-          <button class="comprar">Comprar</button>
+            <button class="comprar">Comprar</button>
+          </div>
         </div>
       </div>
+    </section>
+
+    <script src="../js/comprar-ingressos.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/tema.js"></script>
+    <script src="../js/jogos.js"></script>
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
-  </section>
 
-  <script src="../js/comprar-ingressos.js"></script>
-  <script src="../js/logout.js"></script>
-  <script src="../js/tema.js"></script>
-  <script src="../js/jogos.js"></script>
-  
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget("https://vlibras.gov.br/app");
-  </script>
-</body>
-
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </body>
 </html>

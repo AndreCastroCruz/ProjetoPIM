@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${item.nome}</h3>
         <p>📅 ${item.data}</p>
         <p>⏰ ${item.hora}</p>
+        <p>🎫 Setor: ${item.setor}</p>
         <p>Quantidade: ${item.quantidade}</p>
         <p>Valor: R$ ${item.total}</p>
         <button class="remover" data-index="${index}">🗑️</button>
