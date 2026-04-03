@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   botoesComprar.forEach(botao => {
     botao.addEventListener("click", () => {
+      
 
       const usuario = localStorage.getItem("usuarioLogado");
 
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      const jogo = botao.parentElement;
+      const jogo = botao.closest(".jogo");
 
       const nome = jogo.querySelector("h3").innerText;
       const preco = Number(jogo.querySelector(".preco").dataset.preco);
@@ -50,5 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       alert(`Ingressos adicionados ao carrinho!\nSetor: ${setor}\nTotal: R$ ${total}`);
     });
+
+    
   });
 });

@@ -29,6 +29,18 @@
 
         <h3 id="total-geral"></h3>
 
+        <div id="area-cupom">
+          <p
+            id="texto-cupom"
+            style="color: #aaa; font-size: 14px; margin-bottom: 8px"
+          >
+            🎟️ Insira seu código de desconto abaixo
+          </p>
+          <input type="text" id="cupom" maxlength="6" placeholder="ABC123" />
+          <button id="aplicar-cupom">Aplicar</button>
+          <p id="mensagem-cupom"></p>
+        </div>
+
         <button id="finalizar-compra">Finalizar Compra</button>
       </div>
 
@@ -100,6 +112,5 @@
     <script>
       new window.VLibras.Widget("https://vlibras.gov.br/app");
     </script>
-    
   </body>
 </html>

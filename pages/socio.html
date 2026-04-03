@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sócio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="header-interno">
+      <div class="logo-area">
+        <span class="logo-text">⚽ TicketFut</span>
+      </div>
+
+      <nav>
+        <a href="../index.html">Início</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="meus-ingressos.html">Meus Ingressos</a>
+        <a href="#" id="logout">Sair</a>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <img src="../images/estadio.jpg" class="bg" />
+
+      <div class="overlay">
+        <h2 id="titulo-socio">Carregando...</h2>
+
+        <div id="area-socio"></div>
+      </div>
+    </section>
+
+    <script src="../js/socio.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/tema.js"></script>
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+
+  </body>
+</html>
